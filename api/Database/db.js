@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://127.0.0.1:27017/pubg",
+mongoose.connect("mongodb+srv://placement:placement@cluster0.i5cpa.mongodb.net/pubg?retryWrites=true&w=majority",
     {
         useNewUrlParser: true, useUnifiedTopology: true, //make this true
         autoIndex: true

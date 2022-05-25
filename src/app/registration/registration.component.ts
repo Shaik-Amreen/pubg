@@ -36,8 +36,9 @@ export class RegistrationComponent implements OnInit {
 
 
   submit() {
-    this.submitStatus = 'Submitting ... please wait !!!'
+
     if (this.formdata.status == 'VALID') {
+      this.submitStatus = 'Submitting ... please wait !!!'
       this.http.post('/postdata', this.formdata.value).subscribe(
         res => {
           sessionStorage.setItem('mail', this.formdata.value.mail)

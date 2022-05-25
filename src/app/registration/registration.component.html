@@ -1,0 +1,98 @@
+<div style="height:100vh ;" class="table-responsive"> <br />
+    <div class="card p-2 m-2" style="font-family: 'Cabin', sans-serif;font-weight: 600;"><br />
+        <div class="details mainlink">
+            <strong>UPI ID : 9381461588</strong><br />
+            <strong>UPI Name : Sai Nadh</strong>
+        </div><br />
+        <form [formGroup]="formdata" (ngSubmit)="submit()">
+            <label>Name <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="name" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.name.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+            <label>Mail <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="mail" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.mail.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <span *ngIf="formdata.controls.mail.errors?.pattern && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                enter valid mail</span>
+            <br />
+
+
+            <label> Mobile number <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="mobile" class="form-control shadow-none" type="number">
+            <span *ngIf="formdata.controls.mobile.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <span *ngIf="formdata.controls.mobile.errors?.minLength && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                enter valid phone number</span>
+            <br />
+
+            <label>Team Name <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="teamname" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.teamname.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+            <label>Your Game Id <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="teamid" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.teamid.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+            <label>Team member 2 Game Id <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="teamoneid" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.teamoneid.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+            <label>Team member 3 Game Id <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="teamtwoid" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.teamtwoid.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+            <label>Team member 4 Game Id <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="teamthird" class="form-control shadow-none" type="text">
+            <span *ngIf="formdata.controls.teamthird.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br />
+
+
+
+
+
+
+
+            <label>UTR / Ref No <sup style="color: crimson;"><strong>*</strong></sup></label>
+            <input formControlName="utr" class="form-control shadow-none" type="number">
+            <span *ngIf="formdata.controls.utr.errors?.required && errorStatus"
+                style="color:crimson;font-size:0.8rem;font-weight:500;letter-spacing:0.5px ;">Please
+                fill the above
+                field</span>
+            <br /><br />
+
+            <div style="text-align: center;"> <button type="submit" class="btn btn-warning"><strong>
+                        {{submitStatus}}
+                    </strong></button></div>
+            <br>
+        </form>
+    </div>

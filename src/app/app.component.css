@@ -1,0 +1,7 @@
+.logo {
+    background-image: url("/assets/mits-modified.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}

@@ -1,0 +1,59 @@
+.details {
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+.linear {
+    background: rgb(252, 176, 69);
+    background: linear-gradient(144deg, rgba(252, 176, 69, 1) 19%, rgba(34, 193, 195, 1) 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.datestyle {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(144deg, rgba(0, 0, 0, 1) 19%, rgba(34, 193, 195, 1) 88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.tour {
+    background: rgb(252, 176, 69);
+    background: linear-gradient(144deg, rgba(0, 0, 0, 1) 19%, rgb(252, 127, 69) 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.mainlink {
+    font-family: 'Poppins', sans-serif;
+    color: transparent;
+    text-align: center;
+    animation: effect 2s linear infinite;
+
+}
+
+@keyframes effect {
+    0% {
+
+        background: linear-gradient(144deg, #ffa500 19%, rgb(24, 31, 28) 88%);
+        -webkit-background-clip: text;
+    }
+
+
+    100% {
+        background: linear-gradient(144deg, #b19542 19%, rgb(33, 159, 102) 88%);
+        -webkit-background-clip: text;
+    }
+}
+
+.heading {
+
+    background: linear-gradient(144deg, rgb(209, 140, 37) 19%, rgb(17, 63, 7)100%);
+}

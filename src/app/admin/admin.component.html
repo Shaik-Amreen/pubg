@@ -1,0 +1,66 @@
+<div style="background-color: white;height:100vh;" class="table-responsive">
+
+
+
+    <div *ngIf="data.length>0 else nodata">
+        <table class="table table-bordered  table-striped text-center"
+            style="font-size: 0.8rem;font-family: 'Cabin',sans-serif;">
+            <tbody>
+                <tr>
+                    <td>Name
+                    </td>
+
+                    <td>Mail </td>
+
+                    <td>Mobile number </td>
+
+                    <td>Team Name </td>
+
+                    <td>Your Game Id </td>
+
+                    <td>Team member 2 Game Id </td>
+
+                    <td>Team member 3 Game Id </td>
+
+                    <td>Team member 4 Game Id </td>
+
+                    <td>UTR / Ref No </td>
+                    <td>Status</td>
+
+                </tr>
+                <tr *ngFor="let c of data;index as i">
+
+                    <td>{{c.name}}</td>
+                    <td>{{c.mail}}</td>
+                    <td>{{c.mobile}}</td>
+                    <td>{{c.teamname}}</td>
+                    <td>{{c.teamid}}</td>
+                    <td>{{c.teamoneid}}</td>
+                    <td>{{c.teamtwoid}}</td>
+                    <td>{{c.teamthird}}</td>
+                    <td>{{c.utr}}</td>
+                    <td>
+                        <span *ngIf="c.status=='accepted'">{{c.status}}</span>
+                        <span *ngIf="c.status!='accepted'"><button class="btn btn-warning" (click)="submit(c,i)"><strong
+                                    style="font-size: 0.8rem;">Accept</strong></button>
+                        </span>
+                    </td>
+
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <ng-template #nodata>
+        <div class="mainlink" style="height:100vh;display: flex;justify-content: center;align-items: center;">
+            <strong> No registrations yet !!</strong>
+        </div>
+    </ng-template>
+
+
+
+
+</div>

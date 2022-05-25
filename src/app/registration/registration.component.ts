@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
 
     this.formdata = new FormGroup(
       {
-        mail: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@gmail+\.com+$")]),
+        mail: new FormControl('', [Validators.required]),
         utr: new FormControl('', Validators.required),
         mobile: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
         name: new FormControl('', Validators.required),
